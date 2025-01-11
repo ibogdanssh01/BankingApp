@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.Controller">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="516.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Label layoutX="290.0" layoutY="45.0" text="Login" textAlignment="CENTER" underline="true">
+                    <font>
+                        <Font name="Rockwell" size="23.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameField" layoutX="246.0" layoutY="107.0" />
+                <PasswordField fx:id="passwordField" layoutX="246.0" layoutY="157.0" />
+                <Label layoutX="138.0" layoutY="110.0" text="Username" textAlignment="CENTER" underline="true">
+                    <font>
+                        <Font name="Rockwell" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="140.0" layoutY="160.0" text="Password" textAlignment="CENTER" underline="true">
+                    <font>
+                        <Font name="Rockwell" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="signInButton" layoutX="294.0" layoutY="200.0" mnemonicParsing="false" text="Sign in" onAction="#signInButtonAction" />
+                <Button fx:id="signUpButton" layoutX="181.0" layoutY="247.0" mnemonicParsing="false" text="You don't have an account? Press here to sign up!" onAction="#signUpButtonAction" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
