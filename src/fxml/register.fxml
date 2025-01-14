@@ -41,7 +41,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.Controller">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -82,7 +82,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Button fx:id="loginPage" contentDisplay="CENTER" layoutX="266.0" layoutY="309.0" mnemonicParsing="false" text="Login page" textFill="#eb0000" underline="true">
+            <Button fx:id="loginPage" contentDisplay="CENTER" layoutX="266.0" layoutY="309.0" mnemonicParsing="false" text="Login page" textFill="#eb0000" underline="true" onAction="#loginPageAction">
                <font>
                   <Font name="Bookman Old Style Bold" size="16.0" />
                </font>
