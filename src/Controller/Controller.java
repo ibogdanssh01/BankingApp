@@ -1,4 +1,4 @@
-package hellofx;
+package Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,7 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-import DatabaseUtil;
+import hellofx.DatabaseUtil;
 
 public class Controller {
 
@@ -62,7 +62,8 @@ public class Controller {
 
         if(DatabaseUtil.validateUser(username, password)) {
             System.out.println("Login successful");
-            reloadPage();
+            mainPageLoad();
+
         } else {
             System.out.println("Login failed");
             return;
@@ -70,12 +71,28 @@ public class Controller {
 
     }
 
+    @FXML
+    private void mainPageLoad() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MainPage.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) signInButton.getScene().getWindow();
+
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private void signUpButtonAction() {
         try {
             // Load the new FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("register.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/register.fxml"));
             Parent root = loader.load();
 
             // Get the current stage
@@ -86,36 +103,25 @@ public class Controller {
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void reloadPage() {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
-            Parent root = loader.load();
-            Stage stage = (Stage) signInButton.getScene().getWindow();
-            stage.setScene(new Scene(root));
-        } catch (IOException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 
     private void reloadPageRegister() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("register.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/register.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) registerButton.getScene().getWindow();
             stage.setScene(new Scene(root));
         } catch (IOException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 
     @FXML
     private void loginPageAction() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/main.fxml"));
             Parent root = loader.load();
 
             // Get the current stage

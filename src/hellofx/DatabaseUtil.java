@@ -20,7 +20,7 @@ public class DatabaseUtil {
         try {
             connection.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
         }
     }
 
@@ -34,7 +34,7 @@ public class DatabaseUtil {
             ResultSet resultSet = preparedStatement.executeQuery();
             return resultSet.next();
         } catch (SQLException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
             return false;
         }
     }
@@ -54,7 +54,7 @@ public class DatabaseUtil {
             int rowsAffected = stmt.executeUpdate();
             return rowsAffected > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            // e.printStackTrace();
             return false;
         }
     }

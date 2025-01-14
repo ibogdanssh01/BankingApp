@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.Controller">
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="516.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
