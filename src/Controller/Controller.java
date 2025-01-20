@@ -13,6 +13,9 @@ import java.io.IOException;
 import hellofx.DatabaseUtil;
 
 public class Controller {
+    public static String username;
+    public static String password;
+
 
     @FXML
     private Label labelInfo;
@@ -52,8 +55,8 @@ public class Controller {
 
     @FXML
     private void signInButtonAction() {
-        String username = usernameField.getText();
-        String password = passwordField.getText();
+        username = usernameField.getText();
+        password = passwordField.getText();
 
         if(username.isEmpty() || password.isEmpty()) {
             System.out.println("Please enter a username and password");
