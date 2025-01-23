@@ -37,7 +37,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label id="moneyLabel" layoutX="386.0" layoutY="44.0" text="\$12345.500" textFill="#029d52">
+            <Label fx:id="moneyLabel" layoutX="386.0" layoutY="44.0" text="$0.0" textFill="#029d52" >
                <font>
                   <Font name="Eras Bold ITC" size="14.0" />
                </font>
@@ -47,10 +47,10 @@
                   <Font name="Proxima Nova Regular" size="21.0" />
                </font>
             </Label>
-            <TableView id="sendersTable" editable="true" layoutX="19.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="sendersTable" editable="true" layoutX="19.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0">
               <columns>
-                <TableColumn prefWidth="101.3333740234375" text="Last sender" />
-                <TableColumn prefWidth="97.33331298828125" text="Money sent" />
+                <TableColumn fx:id = "lastSenderTable" prefWidth="101.3333740234375" text="Last sender" />
+                <TableColumn fx:id = "moneySentTable" prefWidth="97.33331298828125" text="Money sent" />
               </columns>
             </TableView>
             <Label layoutX="270.0" layoutY="129.0" text="Send money">
@@ -58,19 +58,19 @@
                   <Font name="Proxima Nova Regular" size="21.0" />
                </font>
             </Label>
-            <TextField id="usernameLabel" layoutX="253.0" layoutY="187.0" />
+            <TextField fx:id="usernameLabel" layoutX="253.0" layoutY="187.0" />
             <Label layoutX="268.0" layoutY="169.0" text="Username(ex: Bogdan)" />
-            <TextField id="sendMoneyLabel" layoutX="253.0" layoutY="236.0" />
+            <TextField fx:id="sendMoneyLabel" layoutX="253.0" layoutY="236.0" />
             <Label layoutX="260.0" layoutY="220.0" text="Money (ONLY NUMBERS)" />
-            <Button id="sendMoneyButton" layoutX="299.0" layoutY="265.0" mnemonicParsing="false" text="Send" />
+            <Button fx:id="sendMoneyButton" layoutX="299.0" layoutY="265.0" mnemonicParsing="false" text="Send" />
             <Label layoutX="463.0" layoutY="129.0" text="Deposit money">
                <font>
                   <Font name="Proxima Nova Regular" size="21.0" />
                </font>
             </Label>
-            <TextField id="depositMoneyLabel" layoutX="458.0" layoutY="187.0" />
+            <TextField fx:id="depositMoneyLabel" layoutX="458.0" layoutY="187.0" />
             <Label layoutX="465.0" layoutY="169.0" text="Money (ONLY NUMBERS)" />
-            <Button id="depositButton" layoutX="504.0" layoutY="216.0" mnemonicParsing="false" text="Deposit" />
+            <Button fx:id="depositButton" layoutX="504.0" layoutY="216.0" mnemonicParsing="false" text="Deposit" onAction="#updateBalanceMoney" />
          </children>
     </AnchorPane>
   </children>
