@@ -9,8 +9,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utils.DatabaseUtil;
+
 import java.io.IOException;
-import hellofx.DatabaseUtil;
 
 public class Controller {
     public static String username;
@@ -161,7 +162,7 @@ public class Controller {
             return;
         }
 
-        if(DatabaseUtil.registerUser(username, password, email)) {
+        if(DatabaseUtil.registerUser(username, email, password)) {
             System.out.println("Registration successful");
             reloadPageRegister();
         } else {
